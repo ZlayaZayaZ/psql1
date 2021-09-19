@@ -1,14 +1,14 @@
 ## PSQL-запросы
 #
-### create table Musician (
-#### id serial primary key,
-#### name varchar(50) not null unique
-### );
-#
 ### create table Genre (
 #### id serial primary key,
-#### name_genre varchar(50) not null unique,
-#### musician_id integer references Musician(id)
+#### name_genre varchar(50) not null unique
+### );
+#
+### create table Musician (
+#### id serial primary key,
+#### name varchar(50) not null unique,
+#### genre_id integer references Genre(id)
 ### );
 #
 ### create table Album (
